@@ -1,0 +1,34 @@
+class Employee {
+    String name;
+    double salary;
+
+    void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Salary: " + salary);
+    }
+}
+
+class Manager extends Employee {
+    String department;
+
+    void displayManagerInfo() {
+        displayInfo(); // Calling parent class method
+        System.out.println("Department: " + department);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Creating Manager object
+        Manager m = new Manager();
+
+        // Assign values
+        m.name = "Rahul";
+        m.salary = 45000;
+        m.department = "Sales";
+
+        // Print all details
+        m.displayManagerInfo();
+    }
+}
